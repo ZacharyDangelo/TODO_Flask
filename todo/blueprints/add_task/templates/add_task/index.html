@@ -1,0 +1,27 @@
+{% extends 'layouts/base.html' %}
+{% import 'macros/form.html' as f with context %}
+
+{% block title %}Add a new task{% endblock %}
+{% block meta_description %}Add a new task to your todo list.{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-8 cold-md-offset-2 well">
+            {% call f.form_tag('add_task.index') %}
+            <legend>Time to add a task!</legend>
+
+            {% call f.form_group(form.task_name, css_class='margin-bottom',
+                                placeholder='Task Name',
+                                rows='1') %}
+            {% endcall %}
+
+            {% call f.form_group(form.task_description, css_class='margin-bottom',
+                                placeholder='Task Description',
+                                rows='3') %}
+            {% endcall %}
+
+            <button type="submit" class="btn btn-primary">Add task</button>
+            {% endcall %}
+        </div>
+    </div>
+{% endblock %}

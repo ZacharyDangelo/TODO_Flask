@@ -5,4 +5,10 @@ pytest==5.1.0
 pytest-cov==2.7.1
 flake8==3.7.8
 Click==6.4
+redis==3.3.7
+celery==4.4.0
 flask-debugtoolbar==0.10.0
+SQLAlchemy==1.2.0
+flask-mail==0.9.1
+flask-wtf==0.9.5
+WTForms-Components==0.9.7
